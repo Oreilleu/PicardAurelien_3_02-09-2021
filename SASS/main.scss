@@ -56,11 +56,13 @@ a{
 }
 
 .head-banner{
-    background-color: darken(white, 5);
+    display: flex;
+    flex-direction: column;
+    background-color: darken(white, 3);
     text-align: center;
     & h1{
         margin: 0;
-        padding: 30px 50px 0 50px ;
+        padding: 40px 50px 0 50px ;
         font-size: 1.5em;
     }
     & p{
@@ -72,9 +74,67 @@ a{
     & a{
         width: 200px;
         margin: auto;
-        background: radial-gradient($color-secondary, $color-primary);
-        margin-bottom: 40px;
-        padding: 10px;
+        color: white;
+        background: linear-gradient(175deg, $color-secondary, 62%,$color-primary);
+        margin-bottom: 50px;
+        padding: 15px 10px;
+        font-weight: 500;
         border-radius: 30px;
+        box-shadow: 0 3px 10px darken(white, 30);
     }
 }
+
+.bloc-nav{
+    width: 90%;
+    margin: auto;
+    & h2{
+        margin-top: 40px;
+        font-size: 1.5em;
+    }
+    &__btn{
+        display: flex;
+        align-items: center;
+        background-color: darken(white, 3);
+        margin-bottom: 20px;
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px darken(white, 10);
+        position: relative;
+        transition: background-color 200ms ease-in-out;
+        & i{
+            font-size: 1.1em;
+            padding: 0 25px 0 20px;
+            color: darken(white, 55);
+        }
+        & .fa-mobile-alt{
+            font-size: 1.2em;
+            padding-right: 30px;
+        }
+        & .fa-store{
+            font-size: 1em;
+            
+        }
+        &:hover{
+            background-color: lighten($color-primary, 35);
+        }
+    }
+    &--number{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 22px;
+        height: 22px;
+        color: white;
+        background-color: $color-primary;
+        font-size: 0.8em;
+        font-weight: 500;
+        border-radius: 50%;
+        position: absolute;
+        left: -10px;
+    }
+    &--text{
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}
+

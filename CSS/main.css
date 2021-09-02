@@ -46,12 +46,14 @@ a {
 }
 
 .head-banner {
-  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
   text-align: center;
 }
 .head-banner h1 {
   margin: 0;
-  padding: 30px 50px 0 50px;
+  padding: 40px 50px 0 50px;
   font-size: 1.5em;
 }
 .head-banner p {
@@ -63,10 +65,66 @@ a {
 .head-banner a {
   width: 200px;
   margin: auto;
-  background: radial-gradient(#FF79DA, #9356DC);
-  margin-bottom: 40px;
-  padding: 10px;
+  color: white;
+  background: linear-gradient(175deg, #FF79DA, 62%, #9356DC);
+  margin-bottom: 50px;
+  padding: 15px 10px;
+  font-weight: 500;
   border-radius: 30px;
+  box-shadow: 0 3px 10px #b3b3b3;
+}
+
+.bloc-nav {
+  width: 90%;
+  margin: auto;
+}
+.bloc-nav h2 {
+  margin-top: 40px;
+  font-size: 1.5em;
+}
+.bloc-nav__btn {
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #e6e6e6;
+  position: relative;
+  transition: background-color 200ms ease-in-out;
+}
+.bloc-nav__btn i {
+  font-size: 1.1em;
+  padding: 0 25px 0 20px;
+  color: #737373;
+}
+.bloc-nav__btn .fa-mobile-alt {
+  font-size: 1.2em;
+  padding-right: 30px;
+}
+.bloc-nav__btn .fa-store {
+  font-size: 1em;
+}
+.bloc-nav__btn:hover {
+  background-color: #f2eafb;
+}
+.bloc-nav--number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  color: white;
+  background-color: #9356DC;
+  font-size: 0.8em;
+  font-weight: 500;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+}
+.bloc-nav--text {
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=main.css.map */
