@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+body {
+  font-family: Roboto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bloc-page {
+  width: 375px;
+  margin: auto;
+  border: 1px solid black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.head-homepage {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 10px 0;
+}
+.head-homepage img {
+  width: 170px;
+}
+
+.head-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6e6e6;
+  box-shadow: 0 5px 7px -5px #b3b3b3 inset;
+}
+.head-form input {
+  width: 120px;
+  background-color: #e6e6e6;
+  margin: 15px 0 15px 0px;
+  font-size: 0.9em;
+  font-weight: 550;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+.head-banner {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+.head-banner h1 {
+  margin: 0;
+  padding: 30px 50px 0 50px;
+  font-size: 1.5em;
+}
+.head-banner p {
+  margin: 0;
+  padding: 15px 0 30px 0;
+  font-size: 1.1em;
+  font-weight: 280;
+}
+.head-banner a {
+  width: 200px;
+  margin: auto;
+  background: radial-gradient(#FF79DA, #9356DC);
+  margin-bottom: 40px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+/*# sourceMappingURL=main.css.map */
