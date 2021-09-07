@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 body {
   font-family: Roboto;
   margin: 0;
@@ -132,6 +133,7 @@ a {
 
 .homepage {
   background-color: whitesmoke;
+  padding-bottom: 40px;
 }
 .homepage h1 {
   padding: 40px 0 0px 5%;
@@ -141,6 +143,7 @@ a {
   height: 70%;
   border-radius: 20px 20px 0 0;
   object-fit: cover;
+  object-position: 0 100%;
 }
 .homepage .homepage-item {
   display: block;
@@ -151,6 +154,7 @@ a {
   margin-bottom: 20px;
   border-radius: 20px;
   box-shadow: 5px 5px 10px #e6e6e6;
+  position: relative;
 }
 .homepage .homepage-item__content {
   display: flex;
@@ -165,14 +169,65 @@ a {
 .homepage .homepage-item p {
   margin: 0;
 }
+.homepage .homepage-item .homepage-item__btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #99E2D0;
+  color: #2a947a;
+  padding: 5px 10px;
+  font-size: 0.8em;
+  font-weight: 500;
+  border-radius: 3px;
+}
+.homepage .homepage-item--img {
+  object-position: 0 60%;
+}
 .homepage .homepage-item i {
   color: #333333;
   padding-right: 15px;
   font-size: 20px;
   font-weight: normal;
+  position: relative;
+  z-index: 1;
+}
+.homepage .homepage-item i:hover::after {
+  opacity: 1;
 }
 .homepage .homepage-item i::after {
-  background: url(../images/heart-solid.svg);
+  content: "";
+  background: url(../images/heart-solid.svg) no-repeat;
+  color: red;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.footer-homepage {
+  display: flex;
+  flex-direction: column;
+  background-color: #404040;
+  padding: 0 0 20px 20px;
+}
+.footer-homepage h1 {
+  font-family: "Shrikhand", cursive;
+  padding: 8px 0 3px 0;
+  color: white;
+  font-size: 1.1em;
+}
+.footer-homepage .footer-homepage__text i {
+  margin-right: 8px;
+}
+.footer-homepage .fa-utensils {
+  padding-right: 8px;
+}
+.footer-homepage a {
+  color: white;
+}
+.footer-homepage .footer-homepage__text {
+  color: white;
+  margin-bottom: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */
