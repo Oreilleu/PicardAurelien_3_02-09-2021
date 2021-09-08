@@ -1,0 +1,17 @@
+.head-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darken(white, 10);
+    box-shadow: 0 5px 7px -5px darken(white, 30) inset;
+    & input{
+        width: 120px;
+        background-color: darken(white, 10);
+        margin: 15px 0 15px 0px;
+        font-size: 0.9em;
+        font-weight: 550;
+        text-align: center;
+        border: none;
+        outline: none;
+    }
+}

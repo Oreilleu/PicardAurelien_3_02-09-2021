@@ -1,0 +1,9 @@
+.head-homepage{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 10px 0;
+    // box-shadow: 0 5px 8px -5px darken(white, 30);
+    & img{
+        width: 170px;
+    }
+}

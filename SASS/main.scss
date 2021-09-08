@@ -1,248 +1,30 @@
-// Définition des style principaux
+// homepage
+@import "./utils/import.scss";
+@import "./utils/variables.scss";
+@import "./base/base.scss";
+@import "./layouts/header-homepage.scss";
+@import "./layouts/form-homepage.scss";
+@import "./layouts/banner-homepage.scss";
+@import "./layouts/nav-homepage.scss";
+@import "./layouts/section-homepage";
+@import "./pages/footer.scss";
 
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-
-body{
-    font-family: Roboto;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+// frenchpage
 .bloc-page{
-    width: 375px;
-    margin: auto;
     border: 1px solid black;
 }
-
-a{
-    text-decoration: none;
-    color: black;
-}
-
-// Header (logo)
-
-.head-homepage{
+.head-french{
     display: flex;
-    justify-content: center;
-    margin: 20px 0 10px 0;
-    // box-shadow: 0 5px 8px -5px darken(white, 30);
-    & img{
-        width: 170px;
-    }
-}
-
-.head-form{
-    display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: darken(white, 10);
-    box-shadow: 0 5px 7px -5px darken(white, 30) inset;
-    & input{
-        width: 120px;
-        background-color: darken(white, 10);
-        margin: 15px 0 15px 0px;
-        font-size: 0.9em;
-        font-weight: 550;
-        text-align: center;
-        border: none;
-        outline: none;
-    }
-}
-
-.head-banner{
-    display: flex;
-    flex-direction: column;
-    background-color: darken(white, 3);
-    text-align: center;
-    & h1{
-        margin: 0;
-        padding: 40px 50px 0 50px ;
-        font-size: 1.5em;
-    }
-    & p{
-        margin: 0;
-        padding: 15px 0 30px 0;
-        font-size: 1.1em;
-        font-weight: 280;
-    }
+    padding: 15px 0 10px 0  ;
     & a{
-        width: 200px;
-        margin: auto;
-        color: white;
-        background: linear-gradient(175deg, $color-secondary, 62%,$color-primary);
-        margin-bottom: 50px;
-        padding: 15px 10px;
-        font-weight: 500;
-        border-radius: 30px;
-        box-shadow: 0 3px 10px darken(white, 30);
-    }
-}
-
-.bloc-nav{
-    width: 90%;
-    margin: auto;
-    & h2{
-        margin: 40px 0 30px 0;
-        font-size: 1.5em;
-    }
-    &__btn{
-        display: flex;
-        align-items: center;
-        background-color: darken(white, 4);
-        margin-bottom: 20px;
-        padding: 10px;
-        border-radius: 20px;
-        box-shadow: 5px 5px 10px darken(white, 10);
-        position: relative;
-        transition: all 250ms ease-in-out;
-        & i{
-            font-size: 1.1em;
-            padding: 0 25px 0 20px;
-            color: darken(white, 55);
-        }
-        & .fa-mobile-alt{
-            font-size: 1.2em;
-            padding-right: 30px;
-        }
-        & .fa-store{
-            font-size: 1em;
-            
-        }
-        &:hover{
-            background-color: lighten($color-primary, 35);
-        }
-        &:hover > i{
-            color: $color-primary;
-        }
-    }
-    &--number{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 22px;
-        height: 22px;
-        color: white;
-        background-color: $color-primary;
-        font-size: 0.8em;
-        font-weight: 500;
-        border-radius: 50%;
-        position: absolute;
-        left: -10px;
-    }
-    &--text{
-        font-size: 1rem;
-        font-weight: 500;
-    }
-}
-
-.homepage{
-    background-color: darken(white, 4);
-    padding-bottom: 40px;
-    & h1{
-        padding: 40px 0 0px 5%;
+        margin-left: 20px;
+        font-size: 20px;
+        color: darken(white, 40);
     }
     & img{
-        width: 100%;
-        height: 70%;
-        border-radius: 20px 20px 0 0;
-        object-fit: cover;
-        object-position: 0 100%;
-    }
-    & .homepage-item{
-        display: block;
-        width: 90%;
-        height: 250px;
+        width: auto;
         margin: auto;
-        background-color: white;
-        margin-bottom: 20px;
-        border-radius: 20px;
-        box-shadow: 5px 5px 10px darken(white, 10);
-        position: relative;
-        &__content{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-left: 15px;
-        }
-        & h2{
-            margin: 8px 0;
-            font-size: 1.1em;
-        }
-        & p{
-            margin: 0;
-        }
-        & .homepage-item__btn{
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background-color: $color-tertiary;
-            color: darken($color-tertiary, 37%);
-            padding: 5px 10px;
-            font-size: 0.8em;
-            font-weight: 500;
-            border-radius: 3px;
-            // box-shadow: 1px 1px 6px darken(white, 55);
-        }
-        &--img{
-            object-position: 0 60%;
-        }
-        & i{
-            color: darken(white, 80);
-            padding-right: 15px;
-            font-size: 20px;
-            font-weight: normal;
-            position: relative;
-            z-index:1;
-            &:hover{
-                &::after{
-                    opacity: 1;
-                }
-            }
-            &::after{
-                content: "";
-                background: url(../images/heart-solid.svg) no-repeat;
-                color: red;
-                position: absolute;
-                inset: 0;
-                opacity: 0;
-                z-index: -1;
-            }
-        }
-        
     }
-    
-}
-
-.footer-homepage{
-    display: flex;
-    flex-direction: column;
-    background-color: darken(white, 75%);
-    padding: 0 0 20px 20px;
-    & h1{
-        font-family: 'Shrikhand', cursive;
-        padding: 8px 0 3px 0;
-        color: white;
-        font-size: 1.1em;
-    }
-    & .footer-homepage__text i{
-        margin-right: 8px;
-    }
-    & .fa-utensils{
-        padding-right: 8px;
-    }
-    & a{
-        color: white;
-    }
-    & .footer-homepage__text{
-        color: white;
-        margin-bottom: 5px;
-    }
-    
 }

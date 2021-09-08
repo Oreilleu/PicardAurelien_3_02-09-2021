@@ -1,0 +1,28 @@
+.head-banner{
+    display: flex;
+    flex-direction: column;
+    background-color: darken(white, 3);
+    text-align: center;
+    & h1{
+        margin: 0;
+        padding: 40px 50px 0 50px ;
+        font-size: 1.5em;
+    }
+    & p{
+        margin: 0;
+        padding: 15px 0 30px 0;
+        font-size: 1.1em;
+        font-weight: 280;
+    }
+    & a{
+        width: 200px;
+        margin: auto;
+        color: white;
+        background: linear-gradient(175deg, $color-secondary, 62%,$color-primary);
+        margin-bottom: 50px;
+        padding: 15px 10px;
+        font-weight: 500;
+        border-radius: 30px;
+        box-shadow: 0 3px 10px darken(white, 30);
+    }
+}
