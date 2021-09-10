@@ -92,12 +92,26 @@ a {
   border-radius: 20px;
   box-shadow: 5px 5px 10px #e6e6e6;
   position: relative;
-  transition: all 250ms ease-in-out;
+  z-index: 1;
+}
+.bloc-nav__btn:hover::after {
+  opacity: 1;
+}
+.bloc-nav__btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #f2eafb;
+  border-radius: 20px;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms ease-in-out;
 }
 .bloc-nav__btn i {
   font-size: 1.1em;
   padding: 0 25px 0 20px;
   color: #737373;
+  transition: color 300ms ease-in-out;
 }
 .bloc-nav__btn .fa-mobile-alt {
   font-size: 1.2em;
@@ -105,9 +119,6 @@ a {
 }
 .bloc-nav__btn .fa-store {
   font-size: 1em;
-}
-.bloc-nav__btn:hover {
-  background-color: #f2eafb;
 }
 .bloc-nav__btn:hover > i {
   color: #9356DC;

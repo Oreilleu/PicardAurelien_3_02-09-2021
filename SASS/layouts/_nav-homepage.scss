@@ -15,11 +15,25 @@
         border-radius: 20px;
         box-shadow: 5px 5px 10px darken(white, 10);
         position: relative;
-        transition: all 250ms ease-in-out;
+        z-index: 1;
+        &:hover::after{
+                opacity: 1;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: lighten($color-primary, 35);
+            border-radius: 20px;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms ease-in-out;
+        }
         & i{
             font-size: 1.1em;
             padding: 0 25px 0 20px;
             color: darken(white, 55);
+            transition: color 300ms ease-in-out;
         }
         & .fa-mobile-alt{
             font-size: 1.2em;
@@ -27,10 +41,6 @@
         }
         & .fa-store{
             font-size: 1em;
-            
-        }
-        &:hover{
-            background-color: lighten($color-primary, 35);
         }
         &:hover > i{
             color: $color-primary;
