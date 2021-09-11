@@ -18,6 +18,10 @@ a {
   color: black;
 }
 
+h1, h2, h3, p {
+  margin: 0;
+}
+
 .head-homepage {
   display: flex;
   justify-content: center;
@@ -114,7 +118,7 @@ a {
   align-items: center;
   background-color: whitesmoke;
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 30px 0;
   border-radius: 20px;
   box-shadow: 5px 5px 10px #e6e6e6;
   position: relative;
@@ -135,7 +139,7 @@ a {
 }
 .bloc-nav__btn i {
   font-size: 1.1em;
-  padding: 0 25px 0 20px;
+  padding: 0 25px 0 40px;
   color: #737373;
   transition: color 300ms ease-in-out;
 }
@@ -173,7 +177,7 @@ a {
   padding-bottom: 40px;
 }
 .homepage h1 {
-  padding: 40px 0 0px 5%;
+  padding: 40px 0 30px 5%;
 }
 .homepage img {
   width: 100%;
@@ -268,23 +272,93 @@ a {
   margin-bottom: 5px;
 }
 
-.bloc-page {
-  border: 1px solid black;
-}
-
-.head-french {
+.head-menu {
   display: flex;
   align-items: center;
+  background-color: #f7f7f7;
   padding: 15px 0 10px 0;
 }
-.head-french a {
+.head-menu a {
   margin-left: 20px;
   font-size: 20px;
-  color: #999999;
+  color: #333333;
 }
-.head-french img {
+.head-menu img {
   width: auto;
   margin: auto;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.sectionmenu {
+  height: 100%;
+  background-color: #f7f7f7;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  bottom: 50px;
+  padding: 20px 0;
+  margin-bottom: -50px;
+}
+.sectionmenu h1 {
+  font-family: "Shrikhand", cursive;
+  padding-bottom: 30px;
+}
+.sectionmenu h2 {
+  padding-bottom: 20px;
+}
+.sectionmenu .sectionmenu__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+.sectionmenu .sectionmenu__head i {
+  font-size: 23px;
+  font-weight: normal;
+  color: gray;
+  padding-bottom: 30px;
+}
+.sectionmenu__container {
+  width: 90%;
+  margin: auto;
+}
+.sectionmenu__item {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 8px #d9d9d9;
+  cursor: pointer;
+}
+.sectionmenu__item p {
+  display: flex;
+  align-items: flex-end;
+  padding-top: 10px;
+}
+.sectionmenu__item div > p {
+  font-weight: 300;
+}
+.sectionmenu__item div + p {
+  padding-right: 5px;
+}
+.sectionmenu__btn {
+  width: 200px;
+  margin: auto;
+  color: white;
+  background: linear-gradient(175deg, #FF79DA, 62%, #9356DC);
+  margin-bottom: 50px;
+  padding: 15px 10px;
+  font-weight: 500;
+  border-radius: 30px;
+  box-shadow: 0 3px 10px #b3b3b3;
+  position: relative;
+  text-align: center;
+  width: 180px;
+  margin-top: 50px;
 }
 
 /*# sourceMappingURL=main.css.map */
