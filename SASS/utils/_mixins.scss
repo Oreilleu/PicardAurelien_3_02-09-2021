@@ -1,0 +1,28 @@
+@mixin btn-gradient {
+    width: 200px;
+    margin: auto;
+    color: white;
+    background: linear-gradient(175deg, $color-secondary, 62%,$color-primary);
+    margin-bottom: 50px;
+    padding: 15px 10px;
+    font-weight: 500;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px darken(white, 30);
+    position: relative;
+    // @if (btn-gradient:hover) {
+    //     @include btn-gradient();
+    //     background-color: blue;
+    //     // &::after{
+    //         content: "";
+    //         @include btn-gradient();
+    //         position: absolute;
+    //         inset: 0;
+    //         background: linear-gradient(175deg, lighten($color-secondary, 3%), 62%,lighten($color-primary, 3%));
+    //         margin: 0;
+    //         box-shadow: 0 3px 5px darken(white, 30);
+    //         opacity: 0;
+    //         z-index: -1;
+    //         transition: all 350ms ease;
+    //     }
+    // }
+}

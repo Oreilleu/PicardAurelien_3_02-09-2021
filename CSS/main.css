@@ -72,6 +72,32 @@ a {
   font-weight: 500;
   border-radius: 30px;
   box-shadow: 0 3px 10px #b3b3b3;
+  position: relative;
+  z-index: 1;
+}
+.head-banner a:hover::after {
+  opacity: 1;
+}
+.head-banner a::after {
+  content: "";
+  width: 200px;
+  margin: auto;
+  color: white;
+  background: linear-gradient(175deg, #FF79DA, 62%, #9356DC);
+  margin-bottom: 50px;
+  padding: 15px 10px;
+  font-weight: 500;
+  border-radius: 30px;
+  box-shadow: 0 3px 10px #b3b3b3;
+  position: relative;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(175deg, #ff88de, 62%, #9b63df);
+  margin: 0;
+  box-shadow: 0 3px 5px #b3b3b3;
+  opacity: 0;
+  z-index: -1;
+  transition: all 350ms ease;
 }
 
 .bloc-nav {
@@ -194,9 +220,26 @@ a {
 .homepage .homepage-item--img {
   object-position: 0 60%;
 }
+.homepage .homepage-item i {
+  color: #333333;
+  padding-right: 15px;
+  font-size: 20px;
+  font-weight: normal;
+  position: relative;
+  transition: opacity 150ms;
+}
+.homepage .homepage-item i:hover .heart-full {
+  opacity: 1;
+  z-index: 1;
+}
 .homepage .homepage-item .heart-full {
-  width: 20px;
-  margin: 20px;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 25px;
+  margin-right: 15px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .footer-homepage {

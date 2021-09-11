@@ -1,6 +1,7 @@
 // homepage
 @import "./utils/import.scss";
 @import "./utils/variables.scss";
+@import "./utils/mixins.scss";
 @import "./base/base.scss";
 @import "./layouts/header-homepage.scss";
 @import "./layouts/form-homepage.scss";
@@ -10,7 +11,7 @@
 @import "./pages/footer.scss";
 
 
-// frenchpage
+// Menu page
 .bloc-page{
     border: 1px solid black;
 }
