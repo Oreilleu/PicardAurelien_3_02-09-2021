@@ -1,0 +1,62 @@
+.sectionmenu{
+    height: 100%;
+    background-color: darken(white, 3);
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    bottom: 50px;
+    padding: 20px 0;
+    margin-bottom: -50px;
+    & h1{
+        font-family: 'Shrikhand', cursive;
+        padding-bottom: 30px;
+    }
+    & h2{
+        padding-bottom: 20px;
+    }
+    &__head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+        position: relative;
+        @include btn-heart;
+        i, .heart-full{
+            width: 24px;
+            font-size: 23px;
+            position: absolute;
+            right: 30px;
+            bottom: 35px;
+        }
+    }
+    &__container{
+        width: 90%;
+        margin: auto;
+    }
+    &__item{
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 8px darken(white, 15);
+        cursor: pointer;
+        & p{
+            display: flex;
+            align-items: flex-end;
+            padding-top: 10px;
+        }
+        & div > p{
+            font-weight: 300;
+        }
+        & div + p{
+            padding-right: 5px;
+        }
+    }
+    &__btn{
+        @include btn-gradient;
+        text-align: center;
+        width: 180px;
+        margin-top: 50px;
+    }
+}

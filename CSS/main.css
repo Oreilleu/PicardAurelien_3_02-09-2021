@@ -22,6 +22,15 @@ h1, h2, h3, p {
   margin: 0;
 }
 
+img {
+  width: 100%;
+}
+
+.banner-enchant--img {
+  height: 255px;
+  object-fit: cover;
+}
+
 .head-homepage {
   display: flex;
   justify-content: center;
@@ -239,7 +248,7 @@ h1, h2, h3, p {
 }
 .homepage .homepage-item i:hover + .heart-full {
   opacity: 1;
-  font-size: 25px;
+  width: 21px;
 }
 .homepage .homepage-item .heart-full {
   position: absolute;
@@ -247,32 +256,6 @@ h1, h2, h3, p {
   width: 21px;
   opacity: 0;
   transition: all 350ms ease;
-}
-
-.footer-homepage {
-  display: flex;
-  flex-direction: column;
-  background-color: #404040;
-  padding: 0 0 20px 20px;
-}
-.footer-homepage h1 {
-  font-family: "Shrikhand", cursive;
-  padding: 8px 0 3px 0;
-  color: white;
-  font-size: 1.1em;
-}
-.footer-homepage .footer-homepage__text i {
-  margin-right: 8px;
-}
-.footer-homepage .fa-utensils {
-  padding-right: 8px;
-}
-.footer-homepage a {
-  color: white;
-}
-.footer-homepage .footer-homepage__text {
-  color: white;
-  margin-bottom: 5px;
 }
 
 .head-menu {
@@ -291,10 +274,6 @@ h1, h2, h3, p {
   margin: auto;
 }
 
-.banner img {
-  width: 100%;
-}
-
 .sectionmenu {
   height: 100%;
   background-color: #f7f7f7;
@@ -311,17 +290,43 @@ h1, h2, h3, p {
 .sectionmenu h2 {
   padding-bottom: 20px;
 }
-.sectionmenu .sectionmenu__head {
+.sectionmenu__head {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 30px;
+  position: relative;
 }
-.sectionmenu .sectionmenu__head i {
-  font-size: 23px;
+.sectionmenu__head i {
+  position: absolute;
+  right: 15px;
+  color: #333333;
+  font-size: 20px;
   font-weight: normal;
-  color: gray;
-  padding-bottom: 30px;
+  position: relative;
+  transition: opacity 200ms ease-out;
+  z-index: 1;
+}
+.sectionmenu__head i:hover {
+  opacity: 0;
+}
+.sectionmenu__head i:hover + .heart-full {
+  opacity: 1;
+  width: 21px;
+}
+.sectionmenu__head .heart-full {
+  position: absolute;
+  right: 15px;
+  width: 21px;
+  opacity: 0;
+  transition: all 350ms ease;
+}
+.sectionmenu__head i, .sectionmenu__head .heart-full {
+  width: 24px;
+  font-size: 23px;
+  position: absolute;
+  right: 30px;
+  bottom: 35px;
 }
 .sectionmenu__container {
   width: 90%;
@@ -362,6 +367,32 @@ h1, h2, h3, p {
   text-align: center;
   width: 180px;
   margin-top: 50px;
+}
+
+.footer-homepage {
+  display: flex;
+  flex-direction: column;
+  background-color: #404040;
+  padding: 0 0 20px 20px;
+}
+.footer-homepage h1 {
+  font-family: "Shrikhand", cursive;
+  padding: 8px 0 3px 0;
+  color: white;
+  font-size: 1.1em;
+}
+.footer-homepage .footer-homepage__text i {
+  margin-right: 8px;
+}
+.footer-homepage .fa-utensils {
+  padding-right: 8px;
+}
+.footer-homepage a {
+  color: white;
+}
+.footer-homepage .footer-homepage__text {
+  color: white;
+  margin-bottom: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */

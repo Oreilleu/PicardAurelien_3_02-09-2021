@@ -26,3 +26,30 @@
     //     }
     // }
 }
+
+@mixin btn-heart{
+    & i{
+        position: absolute;
+        right: 15px;
+        color: darken(white, 80);
+        font-size: 20px;
+        font-weight: normal;
+        position: relative;
+        transition: opacity 200ms ease-out;
+        z-index: 1;
+        &:hover{
+            opacity: 0;
+        }
+        &:hover + .heart-full{
+            opacity: 1;
+            width: 21px;
+        }
+    }
+    & .heart-full{
+        position: absolute;
+        right: 15px;
+        width: 21px;
+        opacity: 0;
+        transition: all 350ms ease;
+    }
+}

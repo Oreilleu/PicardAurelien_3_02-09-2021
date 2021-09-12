@@ -1,0 +1,15 @@
+.head-menu{
+    display: flex;
+    align-items: center;
+    background-color: darken(white, 3);
+    padding: 15px 0 10px 0  ;
+    & a{
+        margin-left: 20px;
+        font-size: 20px;
+        color: darken(white, 80);
+    }
+    & img{
+        width: auto;
+        margin: auto;
+    }
+}

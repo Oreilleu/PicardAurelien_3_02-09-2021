@@ -3,91 +3,11 @@
 @import "./utils/variables.scss";
 @import "./utils/mixins.scss";
 @import "./base/base.scss";
-@import "./layouts/header-homepage.scss";
-@import "./layouts/form-homepage.scss";
-@import "./layouts/banner-homepage.scss";
-@import "./layouts/nav-homepage.scss";
-@import "./layouts/section-homepage";
-@import "./pages/footer.scss";
-
-
-// Menu page
-.head-menu{
-    display: flex;
-    align-items: center;
-    background-color: darken(white, 3);
-    padding: 15px 0 10px 0  ;
-    & a{
-        margin-left: 20px;
-        font-size: 20px;
-        color: darken(white, 80);
-    }
-    & img{
-        width: auto;
-        margin: auto;
-    }
-}
-
-.banner img {
-    width: 100%;
-}
-
-.sectionmenu{
-    height: 100%;
-    background-color: darken(white, 3);
-    border-radius: 40px 40px 0 0;
-    position: relative;
-    bottom: 50px;
-    padding: 20px 0;
-    margin-bottom: -50px;
-    & h1{
-        font-family: 'Shrikhand', cursive;
-        padding-bottom: 30px;
-    }
-    & h2{
-        padding-bottom: 20px;
-    }
-    & .sectionmenu__head{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 30px;
-        & i{
-            font-size: 23px;
-            font-weight: normal;
-            color: darken(white, 50);
-            padding-bottom: 30px;
-        }
-    }
-    &__container{
-        width: 90%;
-        margin: auto;
-    }
-    &__item{
-        background-color: white;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 15px;
-        padding: 10px;
-        border-radius: 20px;
-        box-shadow: 3px 3px 8px darken(white, 15);
-        cursor: pointer;
-        & p{
-            display: flex;
-            align-items: flex-end;
-            padding-top: 10px;
-        }
-        & div > p{
-            font-weight: 300;
-        }
-        & div + p{
-            padding-right: 5px;
-        }
-    }
-    &__btn{
-        @include btn-gradient;
-        text-align: center;
-        width: 180px;
-        margin-top: 50px;
-    }
-}
+@import "./pages/header-homepage.scss";
+@import "./pages/form-homepage.scss";
+@import "./pages/banner-homepage.scss";
+@import "./pages/nav-homepage.scss";
+@import "./pages/section-homepage";
+@import "./layouts/header-menu.scss";
+@import "./layouts/section-menu.scss";
+@import "./layouts/footer.scss";
