@@ -22,15 +22,7 @@
         }
         &::after{
             content: "";
-            @include btn-gradient();
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(175deg, lighten($color-secondary, 3%), 62%,lighten($color-primary, 3%));
-            margin: 0;
-            box-shadow: 0 3px 5px darken(white, 30);
-            opacity: 0;
-            z-index: -1;
-            transition: all 350ms ease;
+            @include btn-lighten;
         }
     }
 }

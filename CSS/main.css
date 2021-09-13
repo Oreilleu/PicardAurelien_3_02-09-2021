@@ -105,7 +105,7 @@ img {
   position: relative;
   position: absolute;
   inset: 0;
-  background: linear-gradient(175deg, #ff88de, 62%, #9b63df);
+  background: linear-gradient(175deg, #ff8de0, 62%, #9e67e0);
   margin: 0;
   box-shadow: 0 3px 5px #b3b3b3;
   opacity: 0;
@@ -248,12 +248,12 @@ img {
 }
 .homepage .homepage-item i:hover + .heart-full {
   opacity: 1;
-  width: 21px;
+  width: 20px;
 }
 .homepage .homepage-item .heart-full {
   position: absolute;
   right: 15px;
-  width: 21px;
+  width: 20px;
   opacity: 0;
   transition: all 350ms ease;
 }
@@ -286,9 +286,32 @@ img {
 .sectionmenu h1 {
   font-family: "Shrikhand", cursive;
   padding-bottom: 30px;
+  font-size: 1.7em;
+  font-weight: 500;
 }
 .sectionmenu h2 {
-  padding-bottom: 20px;
+  padding: 0 0 25px 8px;
+  font-size: 1.1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: relative;
+}
+.sectionmenu h2::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 8px;
+  width: 40px;
+  height: 3px;
+  background: #99E2D0;
+}
+.sectionmenu h3 {
+  max-width: 260px;
+  font-size: 1.1em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 10px 0 5px 10px;
 }
 .sectionmenu__head {
   display: flex;
@@ -312,12 +335,12 @@ img {
 }
 .sectionmenu__head i:hover + .heart-full {
   opacity: 1;
-  width: 21px;
+  width: 24px;
 }
 .sectionmenu__head .heart-full {
   position: absolute;
   right: 15px;
-  width: 21px;
+  width: 20px;
   opacity: 0;
   transition: all 350ms ease;
 }
@@ -331,27 +354,65 @@ img {
 .sectionmenu__container {
   width: 90%;
   margin: auto;
+  margin-bottom: 40px;
 }
 .sectionmenu__item {
   background-color: white;
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
-  padding: 10px;
   border-radius: 20px;
   box-shadow: 3px 3px 8px #d9d9d9;
   cursor: pointer;
+  overflow: hidden;
+}
+.sectionmenu__item:hover .icon {
+  transform: translateX(0);
+}
+.sectionmenu__item:hover .price {
+  transform: translateX(0);
 }
 .sectionmenu__item p {
   display: flex;
   align-items: flex-end;
-  padding-top: 10px;
 }
 .sectionmenu__item div > p {
+  display: block;
+  max-width: 260px;
+  font-size: 0.9em;
   font-weight: 300;
+  padding: 0 0 10px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.sectionmenu__item div + p {
-  padding-right: 5px;
+.sectionmenu__item .price {
+  margin-right: 0;
+  font-size: 15px;
+  font-weight: 600;
+  transform: translateX(60px);
+  transition: transform 1s ease;
+}
+.sectionmenu__item .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  background-color: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  transform: translateX(60px);
+  transition: transform 1s ease;
+  overflow: hidden;
+}
+.sectionmenu__item .fa-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  color: #99E2D0;
+  background-color: white;
+  border-radius: 50%;
 }
 .sectionmenu__btn {
   width: 200px;
@@ -367,6 +428,33 @@ img {
   text-align: center;
   width: 180px;
   margin-top: 50px;
+  cursor: pointer;
+  z-index: 1;
+}
+.sectionmenu__btn:hover::after {
+  opacity: 1;
+}
+.sectionmenu__btn::after {
+  content: "";
+  width: 200px;
+  margin: auto;
+  color: white;
+  background: linear-gradient(175deg, #FF79DA, 62%, #9356DC);
+  margin-bottom: 50px;
+  padding: 15px 10px;
+  font-weight: 500;
+  border-radius: 30px;
+  box-shadow: 0 3px 10px #b3b3b3;
+  position: relative;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(175deg, #ff8de0, 62%, #9e67e0);
+  margin: 0;
+  box-shadow: 0 3px 5px #b3b3b3;
+  opacity: 0;
+  z-index: -1;
+  transition: all 350ms ease;
+  width: 180px;
 }
 
 .footer-homepage {

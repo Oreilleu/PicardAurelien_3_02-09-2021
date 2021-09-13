@@ -27,7 +27,19 @@
     // }
 }
 
-@mixin btn-heart{
+@mixin btn-lighten{
+    @include btn-gradient();
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(175deg, lighten($color-secondary, 4%), 62%,lighten($color-primary, 4%));
+    margin: 0;
+    box-shadow: 0 3px 5px darken(white, 30);
+    opacity: 0;
+    z-index: -1;
+    transition: all 350ms ease;
+}
+
+@mixin btn-heart($size: 20px){
     & i{
         position: absolute;
         right: 15px;
@@ -42,14 +54,20 @@
         }
         &:hover + .heart-full{
             opacity: 1;
-            width: 21px;
+            width: $size;
         }
     }
     & .heart-full{
         position: absolute;
         right: 15px;
-        width: 21px;
+        width: 20px;
         opacity: 0;
         transition: all 350ms ease;
     }
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

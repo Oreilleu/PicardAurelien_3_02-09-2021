@@ -9,9 +9,32 @@
     & h1{
         font-family: 'Shrikhand', cursive;
         padding-bottom: 30px;
+        font-size: 1.7em;
+        font-weight: 500;
     }
     & h2{
-        padding-bottom: 20px;
+        padding: 0 0 25px 8px;
+        font-size: 1.1em;
+        font-weight: 300;
+        text-transform: uppercase;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            top: 25px;
+            left: 8px;
+            width: 40px;
+            height: 3px;
+            background: $color-tertiary;
+        }
+    }
+    & h3{
+        max-width: 260px;
+        font-size: 1.1em;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 10px 0 5px 10px;
     }
     &__head{
         display: flex;
@@ -19,7 +42,7 @@
         align-items: center;
         padding: 0 30px;
         position: relative;
-        @include btn-heart;
+        @include btn-heart(24px);
         i, .heart-full{
             width: 24px;
             font-size: 23px;
@@ -31,26 +54,68 @@
     &__container{
         width: 90%;
         margin: auto;
+        margin-bottom: 40px;
     }
     &__item{
         background-color: white;
         display: flex;
         justify-content: space-between;
         margin-bottom: 15px;
-        padding: 10px;
+        // padding: 10px;
         border-radius: 20px;
         box-shadow: 3px 3px 8px darken(white, 15);
         cursor: pointer;
+        overflow: hidden;
+        &:hover {
+            .icon{
+                transform: translateX(0);
+            }
+            .price{
+                transform: translateX(0);
+            }
+        }
+        
+        // .icon, .price{
+        //     transform: translateX(0);
+        // }
         & p{
             display: flex;
             align-items: flex-end;
-            padding-top: 10px;
+            // padding-bottom: 10px;
         }
         & div > p{
+            display: block;
+            max-width: 260px;
+            font-size: 0.9em;
             font-weight: 300;
+            padding: 0 0 10px 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
-        & div + p{
-            padding-right: 5px;
+        & .price{
+            margin-right: 0;
+            font-size: 15px;
+            font-weight: 600;
+            transform: translateX(60px);
+            transition: transform 1s ease;
+        }
+        & .icon{
+            @include center;
+            width: 60px;
+            background-color: $color-tertiary;
+            border-radius: 0 20px 20px 0;
+            transform: translateX(60px);
+            transition: transform 1s ease;
+            overflow: hidden 
+        }
+        & .fa-check{
+            @include center;
+            width: 28px;
+            height: 28px;
+            color: $color-tertiary;
+            background-color: white;
+            border-radius: 50%;
         }
     }
     &__btn{
@@ -58,5 +123,15 @@
         text-align: center;
         width: 180px;
         margin-top: 50px;
+        cursor: pointer;
+        z-index: 1;
+        &:hover::after{
+            opacity: 1;
+        }
+        &::after{
+            content: "";
+            @include btn-lighten;
+            width: 180px;
+        }
     }
 }
