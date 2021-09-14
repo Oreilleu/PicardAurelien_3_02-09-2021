@@ -1,3 +1,7 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+
+$anim-dur: 1000ms;
+$num-art: 3;
+$anim-delay: $anim-dur / $num-art;

@@ -6,6 +6,7 @@
     bottom: 50px;
     padding: 20px 0;
     margin-bottom: -50px;
+    overflow: hidden;
     & h1{
         font-family: 'Shrikhand', cursive;
         padding-bottom: 30px;
@@ -55,15 +56,21 @@
         width: 90%;
         margin: auto;
         margin-bottom: 40px;
+        animation: anim-article 1000ms 500ms ease backwards;
+        @for $i from 1 through 3{
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+        }
     }
     &__item{
         background-color: white;
         display: flex;
         justify-content: space-between;
         margin-bottom: 15px;
-        // padding: 10px;
         border-radius: 20px;
         box-shadow: 3px 3px 8px darken(white, 15);
+        position: relative;
         cursor: pointer;
         overflow: hidden;
         &:hover {
@@ -71,13 +78,15 @@
                 transform: translateX(0);
             }
             .price{
-                transform: translateX(0);
+                transform: translateX(-60px);
             }
+            .fa-check{
+                transform: rotate(0);
+            }
+            // .point{
+            //     width: 80%;
+            // }
         }
-        
-        // .icon, .price{
-        //     transform: translateX(0);
-        // }
         & p{
             display: flex;
             align-items: flex-end;
@@ -85,20 +94,21 @@
         }
         & div > p{
             display: block;
-            max-width: 260px;
+            max-width: 100%;
             font-size: 0.9em;
             font-weight: 300;
             padding: 0 0 10px 10px;
-            overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
         }
         & .price{
-            margin-right: 0;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
             font-size: 15px;
             font-weight: 600;
-            transform: translateX(60px);
-            transition: transform 1s ease;
+            transform: translateX(0);
+            transition: transform 800ms ease;
         }
         & .icon{
             @include center;
@@ -106,16 +116,18 @@
             background-color: $color-tertiary;
             border-radius: 0 20px 20px 0;
             transform: translateX(60px);
-            transition: transform 1s ease;
+            transition: transform 800ms ease;
             overflow: hidden 
         }
         & .fa-check{
             @include center;
-            width: 28px;
-            height: 28px;
+            width: 25px;
+            height: 25px;
             color: $color-tertiary;
             background-color: white;
             border-radius: 50%;
+            transform: rotate(-360deg);
+            transition: transform 750ms ease;
         }
     }
     &__btn{
