@@ -12,8 +12,87 @@
 @import "./layouts/header-menu.scss";
 @import "./layouts/section-menu.scss";
 @import "./layouts/footer.scss";
-@import "./layouts/loader.scss"
+@import "./layouts/loader.scss";
+
+@media only screen and (min-width: 375px){
+     .bloc-page{
+         max-width: 1024px;
+         width: 100%;
+     }
+}
 
 @media only screen and (min-width: 425px) {
-     
+    .loader{
+        left: 100px;
+    }
+    .fa-utensils{
+        left: 175px;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .loader{
+        left: 260px;
+    }
+    .fa-utensils{
+        left: 335px;
+    }
+    // .homepage img{
+        
+    // }
+}
+
+@media only screen and (min-width: 1024px) {
+    .loader{
+        left: 150px;
+        top: 750px;
+    }
+    .loader-2{
+        left: 640px;
+        top: 750px;
+    }
+    .fa-utensils{
+        left: 480px;
+        top: 820px;
+    }
+    .bloc-page{
+        max-width: 1440px;
+    }
+    nav{
+        display: flex;
+        justify-content: space-around;
+    }
+    .bloc-nav__btn{
+        padding-right: 15px;
+    }
+    .homepage{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        & .homepage-item{
+            max-width: 480px;
+            margin-bottom: 30px;
+        }
+        & h1{
+            display: block;
+            width: 100%;
+        }
+    }
+
+}
+
+@media only screen and (width: 1440px){
+    .loader{
+        left: 330px;
+        top: 750px;
+    }
+    .loader-2{
+        left: 870px;
+        top: 750px;
+    }
+    .fa-utensils{
+        left: 685px;
+        top: 820px;
+    }
 }
