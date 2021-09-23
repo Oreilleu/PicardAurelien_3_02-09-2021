@@ -1,9 +1,11 @@
 .homepage{
     background-color: darken(white, 4);
     padding-bottom: 40px;
-    animation: anim-homepage 500ms 3000ms backwards;
-    & h1{
+    // animation: anim-homepage 500ms 3000ms backwards;
+    & h2{
         padding: 40px 0 30px 5%;
+        display: block;
+        width: 100%;
     }
     & img{
         width: 100%;
@@ -28,7 +30,7 @@
             align-items: center;
             padding-left: 15px;
         }
-        & h2{
+        & h3{
             margin: 8px 0;
             font-size: 1.1em;
         }

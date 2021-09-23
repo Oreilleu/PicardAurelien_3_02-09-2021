@@ -73,6 +73,7 @@
         position: relative;
         cursor: pointer;
         overflow: hidden;
+        text-overflow: ellipsis;
         &:hover {
             .icon{
                 transform: translateX(0);
@@ -86,7 +87,7 @@
         }
         & div > p{
             display: block;
-            max-width: 100%;
+            width: 100%;
             font-size: 0.9em;
             font-weight: 300;
             padding: 0 0 10px 10px;
@@ -98,9 +99,6 @@
             position: absolute;
             bottom: 10px;
             right: 10px;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
             font-size: 15px;
             font-weight: 600;
             transform: translateX(0);
@@ -126,6 +124,13 @@
             transition: transform 750ms ease;
         }
     }
+    // &--text{
+    //     text-overflow: ellipsis;
+    //     overflow: hidden;
+    //     max-width: 100%;
+    //     display: block;
+    //     white-space: nowrap;
+    // }
     &__btn{
         @include btn-gradient;
         text-align: center;

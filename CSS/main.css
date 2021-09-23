@@ -220,10 +220,11 @@ img {
 .homepage {
   background-color: whitesmoke;
   padding-bottom: 40px;
-  animation: anim-homepage 500ms 3000ms backwards;
 }
-.homepage h1 {
+.homepage h2 {
   padding: 40px 0 30px 5%;
+  display: block;
+  width: 100%;
 }
 .homepage img {
   width: 100%;
@@ -249,7 +250,7 @@ img {
   align-items: center;
   padding-left: 15px;
 }
-.homepage .homepage-item h2 {
+.homepage .homepage-item h3 {
   margin: 8px 0;
   font-size: 1.1em;
 }
@@ -285,7 +286,6 @@ img {
 }
 .homepage .homepage-item i:hover + .heart-full {
   opacity: 1;
-  width: 20px;
 }
 .homepage .homepage-item .heart-full {
   position: absolute;
@@ -373,7 +373,6 @@ img {
 }
 .sectionmenu__head i:hover + .heart-full {
   opacity: 1;
-  width: 24px;
 }
 .sectionmenu__head .heart-full {
   position: absolute;
@@ -414,6 +413,7 @@ img {
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .sectionmenu__item:hover .icon {
   transform: translateX(0);
@@ -426,7 +426,7 @@ img {
 }
 .sectionmenu__item div > p {
   display: block;
-  max-width: 100%;
+  width: 100%;
   font-size: 0.9em;
   font-weight: 300;
   padding: 0 0 10px 10px;
@@ -438,9 +438,6 @@ img {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
   font-size: 15px;
   font-weight: 600;
   transform: translateX(0);
@@ -518,7 +515,7 @@ img {
   background-color: #404040;
   padding: 0 0 20px 20px;
 }
-.footer-homepage h1 {
+.footer-homepage h3 {
   font-family: "Shrikhand", cursive;
   padding: 8px 0 3px 0;
   color: white;
@@ -693,6 +690,24 @@ img {
   .fa-utensils {
     left: 335px;
   }
+
+  .homepage img {
+    object-position: 0 70%;
+  }
+
+  .sectionmenu__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .sectionmenu__container h2 {
+    display: block;
+    width: 100%;
+  }
+  .sectionmenu__container .sectionmenu__item {
+    width: 350px;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .loader {
@@ -736,6 +751,16 @@ img {
   .homepage h1 {
     display: block;
     width: 100%;
+  }
+
+  .head-menu + img {
+    height: 450px;
+    object-fit: cover;
+    object-position: 0 75%;
+  }
+
+  .head-menu1 + img {
+    object-position: 0 60%;
   }
 }
 @media only screen and (width: 1440px) {
