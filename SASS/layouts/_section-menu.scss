@@ -84,16 +84,20 @@
             .fa-check{
                 transform: rotate(0);
             }
+            .text{
+                animation: anim-text 800ms ease both;
+            }
         }
-        & div > p{
+        & .text{
             display: block;
-            width: 100%;
+            width: 280px;
             font-size: 0.9em;
             font-weight: 300;
             padding: 0 0 10px 10px;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            // margin-right: 10px;
         }
         & .price{
             position: absolute;
@@ -124,13 +128,6 @@
             transition: transform 750ms ease;
         }
     }
-    // &--text{
-    //     text-overflow: ellipsis;
-    //     overflow: hidden;
-    //     max-width: 100%;
-    //     display: block;
-    //     white-space: nowrap;
-    // }
     &__btn{
         @include btn-gradient;
         text-align: center;
