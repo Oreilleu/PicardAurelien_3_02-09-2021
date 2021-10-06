@@ -31,7 +31,7 @@
        margin-top: -70px;
    }
    .bloc-page{
-       max-width: 1440px;
+       max-width: 2000px;
    }
    nav{
        display: flex;
@@ -46,7 +46,7 @@
        justify-content: space-evenly;
        flex-wrap: wrap;
        & .homepage-item{
-           max-width: 485px;
+           width: 485px;
            margin-bottom: 30px;
        }
        & h1{
@@ -63,4 +63,20 @@
        object-position: 0 60%;
    }
 
+}
+
+@media only screen and (min-width: 1340px) {
+    .homepage{
+        & .homepage-item{
+            width: 650px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1740px) {
+    .homepage{
+        & .homepage-item{
+            width: 750px;
+        }
+    }
 }
